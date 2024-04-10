@@ -1,0 +1,9 @@
+services:
+  gradio_app:
+    build: .
+    container_name: gradio-server
+    ports:
+      - "7860:7860"
+    volumes:
+      - .:/code
+    command: python src/main.py
